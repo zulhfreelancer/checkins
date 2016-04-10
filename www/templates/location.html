@@ -1,19 +1,21 @@
 <ion-view title="Location" id="page3">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
         <div style="border: 1px solid #ccc; border-radius: 2px">
-            map
-        </div>
+            <div ng-if="checkin.map">
+                <img ng-src="{{checkin.map}}" style="width:100%;">
+            </div>
+        </div> <!-- /border 1px -->
         <div>
             <p>
                 Address:
             </p>
-            <p>Address</p>
+            <p ng-bind-html="checkin.address | nl2br"></p>
         </div>
         <div>
             <p>
                 Description:
             </p>
-            <p>Description</p>
+            <p ng-bind-html="checkin.description | nl2br"></p>
         </div>
     </ion-content>
 </ion-view>

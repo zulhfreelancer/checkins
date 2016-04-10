@@ -8,8 +8,6 @@ angular.module('app.routes', [])
   // Each state's controller can be found in controllers.js
   $stateProvider
     
-  
-
   .state('myCheckins', {
     url: '/checkins',
     templateUrl: 'templates/myCheckins.html',
@@ -26,10 +24,8 @@ angular.module('app.routes', [])
     url: '/location/:id',
     templateUrl: 'templates/location.html',
     controller: 'locationCtrl'
-  })
+  });
 
-$urlRouterProvider.otherwise('/checkins')
-
-  
+  $urlRouterProvider.otherwise('/checkins');
 
 });

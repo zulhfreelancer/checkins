@@ -1,26 +1,28 @@
 <ion-view title="Checkin" id="page2">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
-        <div style="border: 1px solid #ccc; border-radius: 2px">
-            map
+        <div style="height:200px;">
+            <div ng-if="map" style="border: 1px solid #ccc; border-radius: 2px;">
+                <img ng-src="{{map}}" style="width:100%;height:200px;">
+            </div>
         </div>
         <form class="list" name="checkinForm">
             <label class="item item-input item-stacked-label">
                 <span class="input-label">Latitude</span>
-                <input name="latitude" type="text" placeholder="0.00" readonly required>
+                <input ng-model="$parent.latitude" name="latitude" type="text" placeholder="0.00" readonly required>
             </label>
             <label class="item item-input item-stacked-label">
                 <span class="input-label">Longitude</span>
-                <input name="longitude" type="text" placeholder="0.00" readonly required>
+                <input ng-model="$parent.longitude" name="longitude" type="text" placeholder="0.00" readonly required>
             </label>
             <label class="item item-input item-stacked-label">
                 <span class="input-label">Address</span>
-                <textarea name="address" rows="4" required></textarea>
+                <textarea ng-model="$parent.address" name="address" rows="4" required></textarea>
             </label>
             <label class="item item-input item-stacked-label">
                 <span class="input-label">Description</span>
-                <textarea name="description" rows="4" required></textarea>
+                <textarea ng-model="$parent.description" name="description" rows="4" required></textarea>
             </label>
         </form>
-        <button class="button button-positive button-block" ng-click="save()">Save</button>
+        <button class="button button-positive button-block" ng-click="save()" ng-disabled="!checkinForm.$valid">Save</button>
     </ion-content>
 </ion-view>
