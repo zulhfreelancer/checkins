@@ -1,4 +1,4 @@
-Ionic Sample App - Ionic Workshop @ Microsoft KLCC 9th April 2016
+###Ionic Sample App - Ionic Workshop @ Microsoft KLCC 9th April 2016
 ================
 
 A starting project for Ionic that optionally supports using custom SCSS.
